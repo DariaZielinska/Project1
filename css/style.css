@@ -12,6 +12,7 @@ body{
 nav{
     width: 100%;
     background-color: black;
+/*    position: fixed; tutaj jest potrzebna naprawa pozostalej tresci na stronie, zeby to naglowek byl zawsze na wierzchu a nie zeby nachodzily na niego elementy ze strony*/
 }
 
 nav div{
@@ -19,11 +20,11 @@ nav div{
     align-content: center;
     justify-content: space-between;
 }
-nav div ul{
+nav div .nav_ul{
     display: flex;
 }
 
-nav div ul li{
+.nav_ul_li_logo{
    padding-top: 20px;
    padding-bottom: 20px;
 }
@@ -34,6 +35,8 @@ nav div ul li{
     color: white;
     font-weight: 700;
     font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .nav_logo .main_color{
     font-weight: 900;
@@ -41,6 +44,8 @@ nav div ul li{
 }
 .nav-li_main{
     list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .nav_main{
     text-decoration: none;
@@ -48,6 +53,56 @@ nav div ul li{
     font-weight: 700;
     font-size: 16px;
     margin-left: 30px;
+    border: 1px solid transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.ul_dropdown {
+    list-style: none;
+    color: #fff;
+    padding: 0;
+}
+
+.li_dropdown{
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+.nav_main:hover{
+    color: #24ba96;
+}
+
+#drop:hover ~ #zejdz{
+    display: block;
+}
+#zejdz:hover ~ #zejdz{
+    display: block;
+}
+
+.ul_dropdown {
+    position: absolute;
+    padding-top: 20px;
+    right: 450px;
+    display: none;
+
+}
+
+.ul_dropdown:before {
+    top: 0;
+    content: "";
+    width: 20px;
+    background-color: black;
+    height: 0;
+    display: block;
+    position: absolute;
+}
+
+.li_dropdown{
+    background-color: black;
+    padding: 7px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .container{
@@ -389,6 +444,34 @@ sup{
     color: #999999;
 }
 
+.dolacz{
+    background-color: #24ba96;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 50px);
+}
+
+.dolacz2{
+    color: #24ba96;
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 50px);
+}
+
+.lista{
+
+}
+
 .section3{
     display: flex;
     justify-content: space-between;
@@ -491,13 +574,14 @@ footer div p span{
     width: 50px;
     height: 43px;
     color: #b6b6b6;
-    opacity: 1;
+    opacity: 0;
     cursor: pointer;
     position:absolute;
 }
 .ok{
     position: absolute;
     display: none;
+    cursor: pointer;
 }
 
 .klik{      /*CHECKBOX STYLE*/
@@ -507,7 +591,7 @@ footer div p span{
     height: 43px;
 }
 
-.klik:checked .ok{
+#mycheckbox:checked ~ .ok{
     display: block;
 }
 
