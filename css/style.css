@@ -147,7 +147,7 @@ nav div ul li{
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 
 }
 
@@ -206,4 +206,334 @@ nav div ul li{
     position: absolute;
     bottom: 30px;
     padding: 10px;
+}
+
+
+.section2{
+    background-color: #EBEBEB;
+    padding-bottom: 40px;
+}
+
+.section2 .container{
+display: flex;
+justify-content: space-between;
+}
+
+#cennik{
+font-size: 20px;
+padding-top: 40px;
+position: relative;
+padding-bottom: 60px;
+}
+
+#cennik:after{
+content: "";
+border: 4px solid #24ba96;
+position: absolute;
+width: 250px;
+top: 70px;
+}
+
+.ramka1, .ramka3{
+    position: relative;
+    border: 1px solid #BFBFBF;
+    width: 300px;
+    height: 500px;
+    padding-top: 50px;
+    background-color: #F9F9F9;
+}
+
+
+.kolo{
+position: absolute;
+border: 1px solid #BFBFBF;
+border-radius: 50%;
+width: 40px;
+height: 40px;
+background-color: white;
+bottom: calc(100% - 20px);
+left: calc(50% - 20px);
+}
+
+.czarnekolo{
+position: absolute;
+border: 4px solid #BFBFBF;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+background-color: #BFBFBF;
+right: calc(50% - 10px);
+bottom: calc(50% - 10px);
+}
+
+
+.ramka2{
+    position: relative;
+    border: 1px solid #BFBFBF;
+    width: 300px;
+    height: 500px;
+    padding-top: 50px;
+    background-color: #24ba96;
+}
+
+.kolo2{
+    position: absolute;
+    border: 1px solid #24ba96;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #24ba96;
+    bottom: calc(100% - 20px);
+    left: calc(50% - 20px);
+}
+
+.czarnekolo2{
+    position: absolute;
+    border: 4px solid white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    right: calc(50% - 10px);
+    bottom: calc(50% - 10px);
+}
+
+.naglowek{
+    font-size: 20px;
+    color: #24ba96;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.naglowek2{
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.kolo_pod_naglowkiem{
+    border: 2px solid #BFBFBF;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    left: calc(50% - 55px);
+    position: relative;
+    color: #BFBFBF;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.zloty{
+    font-weight: 700;
+    font-size: 40px;
+}
+sup{
+    font-size: 15px;
+}
+
+.kolo_pod_naglowkiem2{
+    border: 1px solid #24ba96;
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+    left: calc(50% - 55px);
+    position: relative;
+    background-color: white;
+    color: #24ba96;
+    text-align: center;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px;
+}
+
+.lista{
+    list-style: none;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 1px;
+}
+
+.item1{
+    background-color: #E4E4E4;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #999999;
+}
+.item2{
+    background-color: #F1F1F1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #959595;
+}
+
+.lista2{
+    list-style: none;
+    text-align: center;
+    padding-top: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 1px;
+}
+
+.item1_2{
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #999999;
+}
+
+.section3{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+
+#kontakt{
+font-size: 20px;
+padding-top: 40px;
+position: relative;
+}
+
+#kontakt:after{
+content: "";
+border: 4px solid #24ba96;
+position: absolute;
+width: 250px;
+top: 70px;
+left: 0;
+}
+
+form{
+display: flex;
+flex-direction: column;
+    padding-top: 80px;
+}
+
+form input, textarea{
+border: 1px solid #24ba96;
+margin-bottom: 9px;
+width: 600px;
+height: 60px;
+color: #CACACA;
+font-size: 25px;
+font-weight: 300;
+}
+
+textarea{
+resize: none;
+height: 130px;
+}
+
+.elements{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.background_image{
+    background-image: url("../images/red_chair.png");
+    background-size: cover;
+    width: 264px;
+    height: 210px;
+}
+.section3 button{
+    background-color: #24ba96;
+    width: 320px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 30px;
+}
+
+footer{
+    display: flex;
+    margin: 30px;
+    justify-content: space-around;
+}
+footer p:first-child{
+    color: #B4B4B4;
+    padding-top: 10px;
+}
+footer div{
+    display: flex;
+    padding-bottom: 20px;
+}
+footer div p{
+    margin-left: 50px;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 17px;
+    color: #B4B4B4;
+}
+footer div p span{
+    font-weight: 800;
+}
+
+.section3 label{
+    max-width: 370px;
+    padding: 20px;
+    display: flex;
+    margin-left: 15px;
+    position: relative;
+}
+.section3 label input{ /*CHECKBOX*/
+    border: 1px solid #24ba96;
+    width: 50px;
+    height: 43px;
+    color: #b6b6b6;
+    opacity: 1;
+    cursor: pointer;
+    position:absolute;
+}
+.ok{
+    position: absolute;
+    display: none;
+}
+
+.klik{      /*CHECKBOX STYLE*/
+    border: 1px solid #24ba96;
+    position: absolute;
+    width: 50px;
+    height: 43px;
+}
+
+.klik:checked .ok{
+    display: block;
+}
+
+.section3 label p{
+    margin-left: 60px;
+    color: #C4C4C4;
+    font-size: 16px;
+}
+.image1{
+    background-image: url("../images/flickr.png");
+    width: 35px;
+    height: 35px;
+}
+
+.image2{
+    background-image: url("../images/vimeo.png");
+    width: 35px;
+    height: 35px;
+}
+.image3{
+    background-image: url("../images/pinterest.png");
+    width: 35px;
+    height: 35px;
+}
+.image3{
+    background-image: url("../images/twitter.png");
+    width: 35px;
+    height: 35px;
 }
