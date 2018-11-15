@@ -1,2 +1,2 @@
 # Project1
-sit on chair website
+First website project "Sit on Chair"
