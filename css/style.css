@@ -12,7 +12,6 @@ body{
 nav{
     width: 100%;
     background-color: black;
-/*    position: fixed; tutaj jest potrzebna naprawa pozostalej tresci na stronie, zeby to naglowek byl zawsze na wierzchu a nie zeby nachodzily na niego elementy ze strony*/
 }
 
 nav div{
@@ -20,16 +19,16 @@ nav div{
     align-content: center;
     justify-content: space-between;
 }
+
 nav div .nav_ul{
     display: flex;
 }
 
-.nav_ul_li_logo{
+.logo{
    padding-top: 20px;
    padding-bottom: 20px;
 }
-.nav_logo{
-
+.logo_a{
     text-decoration: none;
     list-style: none;
     color: white;
@@ -38,16 +37,18 @@ nav div .nav_ul{
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.nav_logo .main_color{
+
+.logo_a .main_color{
     font-weight: 900;
     color: #24ba96;
 }
-.nav-li_main{
+
+.menu{
     list-style: none;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.nav_main{
+.menu_a{
     text-decoration: none;
     color: white;
     font-weight: 700;
@@ -58,52 +59,51 @@ nav div .nav_ul{
     padding-bottom: 20px;
 }
 
-.ul_dropdown {
-    list-style: none;
-    color: #fff;
-    padding: 0;
-}
-
-.li_dropdown{
-    position: relative;
-    text-decoration: none;
-    color: white;
-}
-.nav_main:hover{
+.menu_a:hover{
     color: #24ba96;
 }
 
-#drop:hover ~ #zejdz{
-    display: block;
-}
-#zejdz:hover ~ #zejdz{
-    display: block;
-}
+/*----------------------------------------------DROPDOWN*/
 
-.ul_dropdown {
-    position: absolute;
-    padding-top: 20px;
-    right: 450px;
+.column {
+    margin-top: 30px;
+    position: relative;
     display: none;
-
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+}
+.column li{
+    list-style: none;
+    padding: 10px;
 }
 
-.ul_dropdown:before {
-    top: 0;
+.column li a{
+    color: white;
+    text-decoration: none;
+}
+
+li:hover .column {
+    position: absolute;
+    display: block;
+}
+
+.column:before {
+    top: calc(0% - 10px);
+    left: calc(50% - 14px);
     content: "";
-    width: 20px;
-    background-color: black;
+    width: 0;
     height: 0;
     display: block;
     position: absolute;
+    border-bottom: 10px solid #000;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
 }
 
-.li_dropdown{
-    background-color: black;
-    padding: 7px;
-    padding-right: 20px;
-    padding-left: 20px;
-}
+
+/*------------------------------------------------------*/
 
 .container{
     width: 1000px;
@@ -119,11 +119,6 @@ nav div .nav_ul{
     display: flex;
     align-items: center;
     justify-content: center;
-/*    margin-left: 205px;
-    margin-right: ;*/
-}
-#row1{
-/*    margin-left: 70px;*/
 }
 
 .slider .container ul{
@@ -136,11 +131,11 @@ nav div .nav_ul{
     list-style: none;
 }
 
-.row{
+.arrow{
     display: flex;
 }
 
-.row a{ /*strzałka w lewo i prawo*/
+.arrow a{ /*strzałka w lewo i prawo*/
     font-size: 90px;
     color: #24ba96;
     text-decoration: none;
@@ -153,7 +148,7 @@ nav div .nav_ul{
     font-weight: lighter;
 }
 
-#row_bottom{
+#arrow_bottom{
     text-align: right;
 }
 
@@ -164,7 +159,6 @@ nav div .nav_ul{
     background-repeat: no-repeat;
    width: 400px;
     height: 305px;
-/*    padding: 200px;*/
 }
 
 .slider-text{ /*wszystko co jest w tekscie na slajderze*/
@@ -178,7 +172,8 @@ nav div .nav_ul{
 }
 
 .slider-text li{
-    margin: 20px;
+    margin: 15px;
+
 }
 .slider-text li:first-child{ /*SIT ON OUR CHAIR*/
     font-size: 30px;
@@ -187,15 +182,21 @@ nav div .nav_ul{
 .slider-text p {
     text-align: center;
     word-spacing: 5px;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 
-.slider-text button{
+.slider-text .button{
     background-color: #24ba96;
-    width: 300px;
+    width: 275px;
     padding: 15px;
     border-radius: 10px;
     color: white;
-    font-size: 30px;
+    font-size: 23px;
+    border: none;
+    text-decoration: none;
+    font-weight: 500;
+
 }
 
 .section1{
@@ -274,14 +275,14 @@ display: flex;
 justify-content: space-between;
 }
 
-#cennik{
+#pricelist{
 font-size: 20px;
 padding-top: 40px;
 position: relative;
 padding-bottom: 60px;
 }
 
-#cennik:after{
+#pricelist:after{
 content: "";
 border: 4px solid #24ba96;
 position: absolute;
@@ -289,7 +290,7 @@ width: 250px;
 top: 70px;
 }
 
-.ramka1, .ramka3{
+.priceBox{
     position: relative;
     border: 1px solid #BFBFBF;
     width: 300px;
@@ -299,7 +300,7 @@ top: 70px;
 }
 
 
-.kolo{
+.hole{
 position: absolute;
 border: 1px solid #BFBFBF;
 border-radius: 50%;
@@ -310,7 +311,7 @@ bottom: calc(100% - 20px);
 left: calc(50% - 20px);
 }
 
-.czarnekolo{
+.miniHole{
 position: absolute;
 border: 4px solid #BFBFBF;
 border-radius: 50%;
@@ -322,7 +323,7 @@ bottom: calc(50% - 10px);
 }
 
 
-.ramka2{
+.priceBoxMiddle{
     position: relative;
     border: 1px solid #BFBFBF;
     width: 300px;
@@ -331,7 +332,7 @@ bottom: calc(50% - 10px);
     background-color: #24ba96;
 }
 
-.kolo2{
+.holeMiddle{
     position: absolute;
     border: 1px solid #24ba96;
     border-radius: 50%;
@@ -342,7 +343,7 @@ bottom: calc(50% - 10px);
     left: calc(50% - 20px);
 }
 
-.czarnekolo2{
+.miniHoleMiddle{
     position: absolute;
     border: 4px solid white;
     border-radius: 50%;
@@ -353,7 +354,7 @@ bottom: calc(50% - 10px);
     bottom: calc(50% - 10px);
 }
 
-.naglowek{
+.plan{
     font-size: 20px;
     color: #24ba96;
     font-weight: 500;
@@ -361,7 +362,7 @@ bottom: calc(50% - 10px);
     padding-bottom: 30px;
 }
 
-.naglowek2{
+.planMiddle{
     font-size: 20px;
     color: white;
     font-weight: 500;
@@ -369,7 +370,7 @@ bottom: calc(50% - 10px);
     padding-bottom: 30px;
 }
 
-.kolo_pod_naglowkiem{
+.decoration{
     border: 2px solid #BFBFBF;
     border-radius: 50%;
     width: 110px;
@@ -383,7 +384,7 @@ bottom: calc(50% - 10px);
     padding: 15px;
 }
 
-.zloty{
+.price{
     font-weight: 700;
     font-size: 40px;
 }
@@ -391,7 +392,7 @@ sup{
     font-size: 15px;
 }
 
-.kolo_pod_naglowkiem2{
+.decorationMiddle{
     border: 1px solid #24ba96;
     border-radius: 50%;
     width: 110px;
@@ -406,7 +407,7 @@ sup{
     padding: 15px;
 }
 
-.lista{
+.ofert{
     list-style: none;
     text-align: center;
     padding-top: 40px;
@@ -428,7 +429,7 @@ sup{
     color: #959595;
 }
 
-.lista2{
+.ofertMiddle{
     list-style: none;
     text-align: center;
     padding-top: 40px;
@@ -444,7 +445,7 @@ sup{
     color: #999999;
 }
 
-.dolacz{
+.join{
     background-color: #24ba96;
     padding: 5px 20px;
     border-radius: 10px;
@@ -456,7 +457,7 @@ sup{
     left: calc(50% - 50px);
 }
 
-.dolacz2{
+.joinMiddle{
     color: #24ba96;
     padding: 5px 20px;
     border-radius: 10px;
@@ -468,51 +469,64 @@ sup{
     left: calc(50% - 50px);
 }
 
-.lista{
-
-}
-
 .section3{
     display: flex;
     justify-content: space-between;
     padding-bottom: 50px;
 }
 
-
-#kontakt{
-font-size: 20px;
-padding-top: 40px;
-position: relative;
+#contact{
+    font-size: 20px;
+    padding-top: 40px;
+    position: relative;
 }
 
-#kontakt:after{
-content: "";
-border: 4px solid #24ba96;
-position: absolute;
-width: 250px;
-top: 70px;
-left: 0;
+#contact:after{
+    content: "";
+    border: 4px solid #24ba96;
+    position: absolute;
+    width: 250px;
+    top: 70px;
+    left: 0;
 }
 
 form{
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     padding-top: 80px;
 }
 
 form input, textarea{
-border: 1px solid #24ba96;
-margin-bottom: 9px;
-width: 600px;
-height: 60px;
-color: #CACACA;
-font-size: 25px;
-font-weight: 300;
+    border: 1px solid #24ba96;
+    margin-bottom: 9px;
+    width: 600px;
+    height: 60px;
+    color: #CACACA;
+    font-size: 25px;
+    font-weight: 300;
 }
 
 textarea{
-resize: none;
-height: 130px;
+    resize: none;
+    height: 130px;
+}
+
+::-webkit-input-placeholder {
+    color: #CDCDCD;
+    font-size: 30px;
+    font-family: Raleway-Light, sans-serif;
+}
+
+::-moz-placeholder {
+    color: #CDCDCD;
+    font-size: 25px;
+    font-family: Raleway-Light, sans-serif;
+}
+
+::-ms-input-placeholder {
+    color: #CDCDCD;
+    font-size: 30px;
+    font-family: Raleway-Light, sans-serif;
 }
 
 .elements{
@@ -520,7 +534,6 @@ height: 130px;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-
 }
 
 .background_image{
@@ -529,6 +542,7 @@ height: 130px;
     width: 264px;
     height: 210px;
 }
+
 .section3 button{
     background-color: #24ba96;
     width: 320px;
@@ -543,14 +557,17 @@ footer{
     margin: 30px;
     justify-content: space-around;
 }
+
 footer p:first-child{
     color: #B4B4B4;
     padding-top: 10px;
 }
+
 footer div{
     display: flex;
     padding-bottom: 20px;
 }
+
 footer div p{
     margin-left: 50px;
     margin-top: 10px;
@@ -558,6 +575,7 @@ footer div p{
     font-size: 17px;
     color: #B4B4B4;
 }
+
 footer div p span{
     font-weight: 800;
 }
@@ -569,6 +587,7 @@ footer div p span{
     margin-left: 15px;
     position: relative;
 }
+
 .section3 label input{ /*CHECKBOX*/
     border: 1px solid #24ba96;
     width: 50px;
@@ -578,13 +597,14 @@ footer div p span{
     cursor: pointer;
     position:absolute;
 }
+
 .ok{
     position: absolute;
     display: none;
     cursor: pointer;
 }
 
-.klik{      /*CHECKBOX STYLE*/
+.click{      /*CHECKBOX STYLE*/
     border: 1px solid #24ba96;
     position: absolute;
     width: 50px;
@@ -600,6 +620,7 @@ footer div p span{
     color: #C4C4C4;
     font-size: 16px;
 }
+
 .image1{
     background-image: url("../images/flickr.png");
     width: 35px;
@@ -611,11 +632,13 @@ footer div p span{
     width: 35px;
     height: 35px;
 }
+
 .image3{
     background-image: url("../images/pinterest.png");
     width: 35px;
     height: 35px;
 }
+
 .image3{
     background-image: url("../images/twitter.png");
     width: 35px;
