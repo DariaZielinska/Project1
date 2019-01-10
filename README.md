@@ -9,11 +9,11 @@ https://dariazielinska.github.io/Sit_On_Chair/
 - HTML, 
 - CSS, 
 - JavaScript, 
-- Sass
+- Sass,
 - Gulp
 
 # Features:
-- Slider
-- Dropdown
+- Slider,
+- Dropdown,
 - Hover interactions
 
