@@ -3,7 +3,7 @@
 First project ever - simple layout
 
 # Available on: 
-https://dariazielinska.github.io/Sit_On_Chair/
+https://dariazielinska.github.io/Sit-On-Chair/
 
 # Technologies: 
 - HTML, 
